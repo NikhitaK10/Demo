@@ -1,25 +1,26 @@
 on: [push]
 
-job_sync:
-  runs-on: [self-hosted, Windows]
-  name: Code Pipeline Sync on self-hosted runners
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v5
-      with:
-        fetch-depth: 0
-    - name: Synchronize
-      uses: ./actions/ispw-sync-local
-      id: sync-local
-      with:
-        host: 'cwcc.bmc.com'
-        port: 16196
-        uid: 'HAUNXG0'
-        pass: ${{ secrets.ISPW_USER_PWD }}
-        runtimeConfiguration: 'TPTP'
-        stream: 'GITFLOW'
-        application: 'GITFLOWI'
-        subAppl: 'GITFLOWI'
-        checkoutLevel: 'DEV2'
-        winTopazPath: ${{ Topaz_Location }}
-        showEnv: true
+jobs:
+  job_sync:
+    runs-on: [self-hosted, Windows]
+    name: Code Pipeline Sync on self-hosted runners
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Synchronize
+        uses: ./actions/ispw-sync-local
+        id: sync-local
+        with:
+          host: 'cwcc.bmc.com'
+          port: 16196
+          uid: 'HAUNXG0'
+          pass: ${{ secrets.ISPW_USER_PWD }}
+          runtimeConfiguration: 'TPTP'
+          stream: 'GITFLOW'
+          application: 'GITFLOWI'
+          subAppl: 'GITFLOWI'
+          checkoutLevel: 'DEV2'
+          winTopazPath: ${{ Topaz_Location }}
+          showEnv: true
