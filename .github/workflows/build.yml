@@ -2,7 +2,7 @@ on: [push]
 
 job_sync:
   runs-on: [self-hosted, Windows]
-    name: Code Pipeline Sync on self-hosted runners
+  name: Code Pipeline Sync on self-hosted runners
   steps:
     - name: Checkout
       uses: actions/checkout@v5
