@@ -17,7 +17,7 @@ jobs:
           port: 16196
           uid: 'HAUNXG0'
           pass: ${{ secrets.ISPW_USER_PWD }}
-          runtimeConfiguration: 'TPTP'
+          runtimeConfiguration: 'iccga'
           stream: 'GITFLOW'
           application: 'GITFLOWI'
           subAppl: 'GITFLOWI'
