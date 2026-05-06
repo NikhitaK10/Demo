@@ -22,5 +22,5 @@ jobs:
           application: 'GITFLOWI'
           subAppl: 'GITFLOWI'
           checkoutLevel: 'DEV2'
-          winTopazPath: ${{ TOPAZ_LOCATION }}
+          winTopazPath: ${{ vars.TOPAZ_LOCATION }}
           showEnv: true
