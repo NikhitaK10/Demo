@@ -1,37 +1,25 @@
 on: [push]
 
-jobs:
-  run-ispw-generate:
-    runs-on: [self-hosted, Windows]
-     name: Code Pipeline Sync on self-hosted runners
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - name: Synchronize
-        uses: ./actions/ispw-sync-local
-        id: sync-local
-        with:
-          host: 'cwcc.bmc.com'
-          port: 16196
-          uid: 'HAUNXG0'
-          pass: ${{ secrets.ISPW_USER_PWD }}
-          runtimeConfiguration: 'TPTP'
-          stream: 'GITFLOW'
-          application: 'GITFLOWI'
-          subAppl: 'GITFLOWI'
-          checkoutLevel: 'DEV2'
-          winTopazPath: ${{ Topaz_Location }}
-          showEnv: true
-      - name: Generate
-        uses: bmc-compuware/ispw-generate@v1
-        id: generate
-        with:
-          ces_url: 'https://CES:2020/'
-          ces_token: ${{ secrets.CES_TOKEN }}
-          srid: 'host-37733'
-          runtime_configuration: 'ISPW'
-          generate_automatically: ${{ steps.sync.outputs.automaticBuildJson }}
-      - name: Get the number of generate failures
-        run: echo "The number of generate failures is ${{ steps.generate.outputs.generate_failed_count }}"
+job_sync:
+  runs-on: [self-hosted, Windows]
+    name: Code Pipeline Sync on self-hosted runners
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v5
+      with:
+        fetch-depth: 0
+    - name: Synchronize
+      uses: ./actions/ispw-sync-local
+      id: sync-local
+      with:
+        host: 'cwcc.bmc.com'
+        port: 16196
+        uid: 'HAUNXG0'
+        pass: ${{ secrets.ISPW_USER_PWD }}
+        runtimeConfiguration: 'TPTP'
+        stream: 'GITFLOW'
+        application: 'GITFLOWI'
+        subAppl: 'GITFLOWI'
+        checkoutLevel: 'DEV2'
+        winTopazPath: ${{ Topaz_Location }}
+        showEnv: true
