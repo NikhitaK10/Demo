@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   run-ispw-generate:
-    runs-on: AP-NGILFORD-W2-GHA
+    runs-on: [self-hosted, Windows]
     name: A job to sync git source into Code Pipeline, then generate it on the mainframe
     steps:
       - name: Sync step
