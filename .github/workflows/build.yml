@@ -27,6 +27,6 @@ jobs:
           gitUid: '@neilg001abc'
           gitToken: ${{ secrets.NEILG001ABC_GITHUB_TOKEN }}
           winTopazPath: ${{ vars.TOPAZ_LOCATION }}
-          ispwConfigPath: "Demo\\GenApp_MainframeCore\\ispwconfig.yml"
+          ispwConfigPath: "Demo/GenApp_MainframeCore/ispwconfig.yml"
           assignmentPrefix: "GFLI"
           showEnv: true
