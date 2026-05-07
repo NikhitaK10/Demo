@@ -3,6 +3,8 @@ on: [push]
 jobs:
   job_sync:
     runs-on: [self-hosted, Windows]
+    env:
+       Win_Topaz_Location: ${{ vars.TOPAZ_LOCATION }}
     name: Code Pipeline Sync on self-hosted runners
     steps:
       - name: Checkout
