@@ -27,5 +27,5 @@ jobs:
           gitBranch: "develop"
           gitRepoUrl: "https://github.com/neilg001abc/Demo.git"
           winTopazPath: ${{ vars.TOPAZ_LOCATION }}
-          ispwConfigPath: "Demo\GenApp_MainframeCore\ispwconfig.yml"
+          ispwConfigPath: "Demo/GenApp_MainframeCore/ispwconfig.yml"
           showEnv: true
