@@ -26,8 +26,6 @@ jobs:
           checkoutLevel: 'FEAT'
           gitUid: '@neilg001abc'
           gitToken: ${{ secrets.NEILG001ABC_GITHUB_TOKEN }}
-          gitBranch: "develop"
-          gitRepoUrl: "https://github.com/neilg001abc/Demo.git"
           winTopazPath: ${{ vars.TOPAZ_LOCATION }}
           ispwConfigPath: "Demo/GenApp_MainframeCore/ispwconfig.yml"
           assignmentPrefix: "GFLI"
