@@ -1,15 +1,16 @@
-on: [push]
-workflow_dispatch:
-  inputs:
-    environment:
-      description: 'Proceed'
-      required: true
-      default: 'Yes'
-      type: choice
-      options:
-        - Yes
-        - No
-        
+on: 
+  push:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Proceed'
+        required: true
+        default: 'Yes'
+        type: choice
+        options:
+          - Yes
+          - No
+
 jobs:
   job_sync:
     runs-on: [self-hosted, Windows]
