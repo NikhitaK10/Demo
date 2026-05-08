@@ -23,7 +23,7 @@ jobs:
           stream: 'GITFLOW'
           application: 'GITFLOWI'
           subAppl: 'GITFLOWI'
-          checkoutLevel: 'FEAT'
+          checkoutLevel: 'UNIT'
           gitUid: '@neilg001abc'
           gitToken: ${{ secrets.NEILG001ABC_GITHUB_TOKEN }}
           winTopazPath: ${{ vars.TOPAZ_LOCATION }}
