@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Synchronize
-        uses: bmc-compuware/ispw-sync-local@ZENG-318739
+        uses: bmc-compuware/ispw-sync-local@v1.9
         id: sync-local
         with:
           host: 'cwcc.bmc.com'
