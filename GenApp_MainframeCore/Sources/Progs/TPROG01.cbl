@@ -7,9 +7,8 @@
 000700********************************************************
 000800* THIS PROGRAM IS A TRAINING PROGRAM
 000900*      WITH A LINK TO TSUBR01
-001000*  **  May 8th
+001000*  **  May 8th new
       * 8th May again and again
-      * again
 001100*      AND COPYLIBS   TCPYA01   (HEADER)
 001200*                     TCPYB01   (LINK AREA)
 001300* ======================================================
@@ -77,7 +76,6 @@
 007400 COPY TCPYA01.
 007500
 007600
-       01  NG PIC X(5).
 007700
 007800****************************************************
 007900**** A COPY MEMBER FOR THE LINKAGE AREA PARAMETERS
