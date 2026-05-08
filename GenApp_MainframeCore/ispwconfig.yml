@@ -5,6 +5,7 @@ ispwApplication:
   runtimeConfig: iccga
   stream: GITFLOW
   application: GITFLOWI
+  subAppl: GITFLOWI
   assignmentPrefix: GFLI
   sandbox: Y
   pathMappings:
