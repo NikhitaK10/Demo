@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Synchronize
-        uses: bmc-compuware/ispw-sync-local@v2.0
+        uses: bmc-compuware/ispw-sync-local@ZENG-318739
         id: sync-local
         with:
           host: 'cwcc.bmc.com'
@@ -27,6 +27,6 @@ jobs:
           gitUid: '@neilg001abc'
           gitToken: ${{ secrets.NEILG001ABC_GITHUB_TOKEN }}
           winTopazPath: ${{ vars.TOPAZ_LOCATION }}
-          ispwConfigPath: "Demo/GenApp_MainframeCore/ispwconfig.yml"
+          ispwConfigPath: "GenApp_MainframeCore/ispwconfig.yml"
           assignmentPrefix: "GFLI"
           showEnv: true
