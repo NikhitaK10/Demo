@@ -8,6 +8,7 @@
 000800* THIS PROGRAM IS A TRAINING PROGRAM
 000900*      WITH A LINK TO TSUBR02 **
 001000*
+      ** NEW LINE
 001100*      AND COPYLIBS   TCPYA02   (HEADER)
 001200*                     TCPYB02   (LINK AREA)
 001300* ======================================================
