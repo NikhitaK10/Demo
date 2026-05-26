@@ -29,7 +29,7 @@ jobs:
           checkoutLevel: 'DEV1'
           gitUid: 'NikhitaK10'
           gitToken: ${{ secrets.GITHUB_TOKEN}}
-          winTopazPath: ${{ vars.TOPAZ_LOCATION }}
+          winTopazPath: "C:/WorkbenchCLI"
           ispwConfigPath: "GenApp_MainframeCore/ispwconfig.yml"
           assignmentPrefix: "ISP2"
           showEnv: true
